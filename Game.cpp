@@ -87,7 +87,7 @@ void Game::addWarrior(string const &playerName, string const &weaponName,
     players_array[num_of_players] = new Warrior(playerName, new_weapon, rider);
     num_of_players++;
 }
-void addWizard(string const &playerName,string const &weaponName, Target target,
+void Game::addWizard(string const &playerName,string const &weaponName, Target target,
           int hitStrength, int range) {
     for (int i = 0; i < num_of_players; ++i) {
         if (players_array[i]->isPlayer(playerName)) {
@@ -98,10 +98,24 @@ void addWizard(string const &playerName,string const &weaponName, Target target,
         throw mtm::GameFull();
     }
     Weapon new_weapon(weaponName, target, hitStrength);
-    players_array[num_of_players] = new Warrior(playerName, new_weapon, rider);
+    players_array[num_of_players] = new Wizard(playerName, new_weapon, range);
     num_of_players++;
 }
+void Game::addTroll(string const &playerName, string const &weaponName,
+                      Target target, int hitStrength, int maxLife) {
+    for (int i = 0; i < num_of_players; ++i) {
+        if (players_array[i]->isPlayer(playerName)) {
+            throw mtm::NameAlreadyExists();
+        }
+    }
+    if (num_of_players >= maxPlayers) {
+        throw mtm::GameFull();
+    }
+    Weapon new_weapon(weaponName, target, hitStrength);
+    players_array[num_of_players] = new Troll(playerName, new_weapon, maxLife);
+    num_of_players++;
 
+}
 GameStatus Game::nextLevel(string const &playerName) {
     for (int i = 0; i < num_of_players; ++i) {
         if (players_array[i]->isPlayer(playerName)) {
@@ -171,7 +185,6 @@ GameStatus Game::fight(string const &playerName1, string const &playerName2) {
             break;
         }
     }
-
     for (int i = 0; i < num_of_players; ++i) {
         if (players_array[i]->isPlayer(playerName2)) {
             ptr_b = players_array[i];
@@ -196,7 +209,7 @@ GameStatus Game::fight(string const &playerName1, string const &playerName2) {
     }
     return SUCCESS;
 }
-
+//player.checkIfCanAttack(player2) //player.checkIfCanAttack(player2.getLocation)
 void Game::swapPlayer(Player &player1, Player &player2) {
     Player temp = player1;
     player1 = player2;

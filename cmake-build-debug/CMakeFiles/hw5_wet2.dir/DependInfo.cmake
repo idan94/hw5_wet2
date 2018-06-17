@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Game.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Game.cpp.obj"
   "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Player.cpp.obj"
+  "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Troll.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Troll.cpp.obj"
   "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Warrior.cpp.obj"
   "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Weapon.cpp.obj"
   "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Wizard.cpp" "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir/Wizard.cpp.obj"

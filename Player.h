@@ -11,7 +11,8 @@
 class Player {
     string name;
     int level;
-    int life;
+protected:    int life; //TODO: Moodle question
+private:
     int strength;
     Weapon weapon;
 protected:
@@ -58,7 +59,7 @@ public:
     /**
      * add one life to the player (life++)
      */
-    void addLife();
+    virtual void addLife();
 
     /**
      * add number to player strength
@@ -106,6 +107,8 @@ public:
     //Print Operator:
     friend std::ostream &operator<<(std::ostream &os, const Player &player);
 
+    virtual bool checkIfCanAttack(Player &enemy);
+    virtual bool checkIfCanAttack(int enemy_location);
 
 };
 

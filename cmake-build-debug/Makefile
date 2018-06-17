@@ -176,6 +176,33 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+Troll.obj: Troll.cpp.obj
+
+.PHONY : Troll.obj
+
+# target to build an object file
+Troll.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.obj
+.PHONY : Troll.cpp.obj
+
+Troll.i: Troll.cpp.i
+
+.PHONY : Troll.i
+
+# target to preprocess a source file
+Troll.cpp.i:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.i
+.PHONY : Troll.cpp.i
+
+Troll.s: Troll.cpp.s
+
+.PHONY : Troll.s
+
+# target to generate assembly for a file
+Troll.cpp.s:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.s
+.PHONY : Troll.cpp.s
+
 Warrior.obj: Warrior.cpp.obj
 
 .PHONY : Warrior.obj
@@ -299,6 +326,9 @@ help:
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s
+	@echo ... Troll.obj
+	@echo ... Troll.i
+	@echo ... Troll.s
 	@echo ... Warrior.obj
 	@echo ... Warrior.i
 	@echo ... Warrior.s

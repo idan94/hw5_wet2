@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.h">
 			<Option target="hw5_wet2"/>
 		</Unit>
+		<Unit filename="C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Troll.cpp">
+			<Option target="hw5_wet2"/>
+		</Unit>
+		<Unit filename="C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Troll.h">
+			<Option target="hw5_wet2"/>
+		</Unit>
 		<Unit filename="C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.cpp">
 			<Option target="hw5_wet2"/>
 		</Unit>

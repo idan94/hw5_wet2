@@ -9,7 +9,8 @@
 #include "Player.h"
 #include "Weapon.h"
 #include "Warrior.h"
-
+#include "Wizard.h"
+#include "Troll.h"
 enum GameStatus {
     INVALID_PARAM,
     NAME_ALREADY_EXISTS,
@@ -57,6 +58,8 @@ public:
     void
     addWizard(string const &playerName, string const &weaponName, Target target,
               int hitStrength, int range);
+    void addTroll(string const &playerName, string const &weaponName,
+                        Target target, int hitStrength, int maxLife);
 
     /**
      * get a player name, and upgrade him to the next level
