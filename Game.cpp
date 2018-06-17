@@ -195,8 +195,8 @@ int Game::indexOfMin(Player **players, int num) {
         if (players[i]->getName() > players[i_min]->getName()) {
             i_min = i;
         }
-        return i_min;
     }
+    return i_min;
 }
 
 void Game::maxSort(Player **players, int currPlayers) {

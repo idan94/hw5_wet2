@@ -22,7 +22,7 @@ public:
     Player(string const& name, const Weapon &weapon);
 
     //Destructor:
-      ~Player() = default;
+      virtual ~Player() = default;
 
     //Copy Constructor:
     Player(const Player &player) = default;

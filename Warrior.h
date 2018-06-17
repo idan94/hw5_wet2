@@ -14,7 +14,7 @@ public:
     Warrior(string const &name, Weapon const &weapon, bool rider);
 
 //Destructor
-    ~Warrior() = default;
+    ~Warrior() override = default;
 
 //Copy Constructor:
     Warrior(const Warrior &warrior) = default;
