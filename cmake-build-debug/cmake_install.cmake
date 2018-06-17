@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2
+# Install script for directory: C:/Users/idanc/CLionProjects/hw5_wet2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/idanc/CLionProjects/hw5_wet2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

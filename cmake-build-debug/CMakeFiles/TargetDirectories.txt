@@ -1,3 +1,3 @@
-C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir
-C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/idanc/CLionProjects/hw5_wet2/cmake-build-debug/CMakeFiles/hw5_wet2.dir
+C:/Users/idanc/CLionProjects/hw5_wet2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/idanc/CLionProjects/hw5_wet2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\CLion 2017.3.4\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.3.4\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2"
+CMAKE_SOURCE_DIR = C:\Users\idanc\CLionProjects\hw5_wet2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\idanc\CLionProjects\hw5_wet2\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2\cmake-build-de
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2017.3.4\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2\cmake-build-debug\CMakeFiles" "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\idanc\CLionProjects\hw5_wet2\cmake-build-debug\CMakeFiles C:\Users\idanc\CLionProjects\hw5_wet2\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Etai Ohana\Documents\GitHub\hw5_wet2\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\idanc\CLionProjects\hw5_wet2\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +175,33 @@ Player.s: Player.cpp.s
 Player.cpp.s:
 	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Player.cpp.s
 .PHONY : Player.cpp.s
+
+Troll.obj: Troll.cpp.obj
+
+.PHONY : Troll.obj
+
+# target to build an object file
+Troll.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.obj
+.PHONY : Troll.cpp.obj
+
+Troll.i: Troll.cpp.i
+
+.PHONY : Troll.i
+
+# target to preprocess a source file
+Troll.cpp.i:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.i
+.PHONY : Troll.cpp.i
+
+Troll.s: Troll.cpp.s
+
+.PHONY : Troll.s
+
+# target to generate assembly for a file
+Troll.cpp.s:
+	$(MAKE) -f CMakeFiles\hw5_wet2.dir\build.make CMakeFiles/hw5_wet2.dir/Troll.cpp.s
+.PHONY : Troll.cpp.s
 
 Warrior.obj: Warrior.cpp.obj
 
@@ -299,6 +326,9 @@ help:
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s
+	@echo ... Troll.obj
+	@echo ... Troll.i
+	@echo ... Troll.s
 	@echo ... Warrior.obj
 	@echo ... Warrior.i
 	@echo ... Warrior.s

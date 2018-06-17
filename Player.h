@@ -11,7 +11,8 @@
 class Player {
     string name;
     int level;
-    int life;
+protected:    int life;
+private:
     int strength;
     Weapon weapon;
 protected:
@@ -58,7 +59,7 @@ public:
     /**
      * add one life to the player (life++)
      */
-    void addLife();
+    virtual void addLife();
 
     /**
      * add number to player strength
