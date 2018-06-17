@@ -87,6 +87,20 @@ void Game::addWarrior(string const &playerName, string const &weaponName,
     players_array[num_of_players] = new Warrior(playerName, new_weapon, rider);
     num_of_players++;
 }
+void addWizard(string const &playerName,string const &weaponName, Target target,
+          int hitStrength, int range) {
+    for (int i = 0; i < num_of_players; ++i) {
+        if (players_array[i]->isPlayer(playerName)) {
+            throw mtm::NameAlreadyExists();
+        }
+    }
+    if (num_of_players >= maxPlayers) {
+        throw mtm::GameFull();
+    }
+    Weapon new_weapon(weaponName, target, hitStrength);
+    players_array[num_of_players] = new Warrior(playerName, new_weapon, rider);
+    num_of_players++;
+}
 
 GameStatus Game::nextLevel(string const &playerName) {
     for (int i = 0; i < num_of_players; ++i) {

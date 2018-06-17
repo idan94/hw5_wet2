@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Weapon.h"
 #include "Warrior.h"
+
 enum GameStatus {
     INVALID_PARAM,
     NAME_ALREADY_EXISTS,
@@ -46,11 +47,16 @@ public:
      * NAME_ALREADY_EXISTS- if the name of the player is already exist
      * GAME_FULL- if the game is full
      */
-    GameStatus addPlayer(string const& playerName, string const& weaponName,
-                         Target target, int hit_strength);
+    GameStatus
+    addPlayer(string const &playerName, string const &weaponName, Target target,
+              int hit_strength);
 
     void addWarrior(string const &playerName, string const &weaponName,
                     Target target, int hitStrength, bool rider);
+
+    void
+    addWizard(string const &playerName, string const &weaponName, Target target,
+              int hitStrength, int range);
 
     /**
      * get a player name, and upgrade him to the next level
@@ -58,7 +64,7 @@ public:
      * @return SUCCESS- if level upgraded
      * NAME_DOES_NOT_EXIST- if the player isn't exist
      */
-    GameStatus nextLevel(string const& playerName);
+    GameStatus nextLevel(string const &playerName);
 
     /**
      * get a player name, and move him one step
@@ -66,7 +72,7 @@ public:
      * @return SUCCESS- if player moved
      * NAME_DOES_NOT_EXIST- if the player isn't exist
      */
-    GameStatus makeStep(string const& playerName);
+    GameStatus makeStep(string const &playerName);
 
     /**
      * get a player name, and add him one life
@@ -84,7 +90,7 @@ public:
      * NAME_DOES_NOT_EXIST- if the player isn't exist
      * INVALID_PARAM- if 'strengthToAdd' is negative
      */
-    GameStatus addStrength(string const& playerName, int strengthToAdd);
+    GameStatus addStrength(string const &playerName, int strengthToAdd);
 
     /**
      *gets a number, and remove all the players that have weapon that is
@@ -104,7 +110,7 @@ public:
      * FIGHT_FAILED- if fight failed
      * SUCCESS- if fight happened
      */
-    GameStatus fight(string const& playerName1, string const& playerName2);
+    GameStatus fight(string const &playerName1, string const &playerName2);
 
     //Print Operator:
     friend std::ostream &operator<<(std::ostream &os, const Game &game);
