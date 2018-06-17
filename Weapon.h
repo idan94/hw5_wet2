@@ -25,7 +25,7 @@ public:
     //Constructor:
     Weapon(string const& name, Target target, int hit_strength);
 
-    //Weapon();
+    Weapon();
 
     //Destructor:
     ~Weapon() = default;

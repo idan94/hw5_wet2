@@ -19,6 +19,15 @@ Player::Player(string const &name, const Weapon &weapon) :
         weapon(weapon),
         player_location(0) {}
 
+Player::Player() :
+        name(),
+        level(1),
+        life(1),
+        strength(1),
+        weapon(),
+        player_location(0) {}
+
+
 /*
 //Destructor:
 Player::~Player(){
@@ -56,7 +65,7 @@ void Player::nextLevel() {
 }
 
 bool Player::isPlayer(string const &playerName) const {
-    return playerName == name;
+    return (playerName == name);
 }
 
 void Player::makeStep() {
@@ -76,9 +85,10 @@ string const &Player::getName() {
 }
 
 
-int Player::getLocation(){
+int Player::getLocation() {
     return player_location;
 }
+
 bool Player::isAlive() const {
     return (level > 0 && life > 0 && strength > 0);
 }
@@ -95,53 +105,53 @@ bool Player::fight(Player &player) {
     //0- no one can attack. 1- this attack player.   2- player attack this
     if (this->checkIfCanAttack(player) && !player.checkIfCanAttack(*this)) {
         //if this can attack player, and player can't attack this
-        who_attacks=1;
+        who_attacks = 1;
     }
-    if (player.checkIfCanAttack(*this) && !this->checkIfCanAttack(player)){
+    if (player.checkIfCanAttack(*this) && !this->checkIfCanAttack(player)) {
         //if player can attack this, and this can't attack player
-        who_attacks=2;
+        who_attacks = 2;
     }
-    if(this->checkIfCanAttack(player) && player.checkIfCanAttack(*this)){
+    if (this->checkIfCanAttack(player) && player.checkIfCanAttack(*this)) {
         //if both players can attack, we will check value
-        if(player.weapon > weapon){
-            who_attacks=2;
+        if (player.weapon > weapon) {
+            who_attacks = 2;
         }
-        if(weapon<player.weapon){
-            who_attacks=1;
+        if (weapon < player.weapon) {
+            who_attacks = 1;
         }
     }
-    if (who_attacks==0) return false;
-        if (who_attacks==2) {
-            switch (player.weapon.getTarget()) {
-                case (LEVEL): {
-                    level -= player.weapon.getHitStrength();
-                    break;
-                }
-                case (STRENGTH): {
-                    strength -= player.weapon.getHitStrength();
-                    break;
-                }
-                case (LIFE): {
-                    life -= player.weapon.getHitStrength();
-                    break;
-                }
+    if (who_attacks == 0) return false;
+    if (who_attacks == 2) {
+        switch (player.weapon.getTarget()) {
+            case (LEVEL): {
+                level -= player.weapon.getHitStrength();
+                break;
             }
-        } else {
-            switch (weapon.getTarget()) {
-                case (LEVEL): {
-                    player.level -= weapon.getHitStrength();
-                    break;
-                }
-                case (STRENGTH): {
-                    player.strength -= weapon.getHitStrength();
-                    break;
-                }
-                case (LIFE): {
-                    player.life -= weapon.getHitStrength();
-                    break;
-                }
+            case (STRENGTH): {
+                strength -= player.weapon.getHitStrength();
+                break;
+            }
+            case (LIFE): {
+                life -= player.weapon.getHitStrength();
+                break;
             }
         }
+    } else {
+        switch (weapon.getTarget()) {
+            case (LEVEL): {
+                player.level -= weapon.getHitStrength();
+                break;
+            }
+            case (STRENGTH): {
+                player.strength -= weapon.getHitStrength();
+                break;
+            }
+            case (LIFE): {
+                player.life -= weapon.getHitStrength();
+                break;
+            }
+        }
+    }
     changeNegativeToZero(level);
     changeNegativeToZero(strength);
     changeNegativeToZero(life);

@@ -28,7 +28,10 @@ protected:
 
     //Constructors
     Player(string const& name, const Weapon &weapon);
+
 public:
+
+    Player();
     //Destructor:
       virtual ~Player() = default;
 

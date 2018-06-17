@@ -10,12 +10,12 @@ Weapon::Weapon(string const& name, Target target, int hit_strength) :
         name(name),
         target(target),
         hitStrength(hit_strength) {}
-/*
+
 Weapon::Weapon():
     name(nullptr),
     target(Target(0)),
     hitStrength(0){}
-
+/*
 //Destructor:
 Weapon::~Weapon(){
     delete []name;

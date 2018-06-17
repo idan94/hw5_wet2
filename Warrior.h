@@ -13,6 +13,7 @@ public:
 //Constructor
     Warrior(string const &name, Weapon const &weapon, bool rider);
 
+
 //Destructor
     ~Warrior() override = default;
 

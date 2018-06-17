@@ -393,7 +393,7 @@ void GameFightTest() {
          "GameFight didn't return NAME_DOES_NOT_EXIST when player two isn't an existing player name.",
          __LINE__);
 }
-
+/*
 void memoryTestUnit() {
     { // block check if assignment free's memory of weapon a after re-assignment
         Weapon gun = Weapon("gun", LIFE, 5);
@@ -421,7 +421,7 @@ void memoryTestUnit() {
 
     }
 }
-
+*/
 int main() {
     cout <<
          "\tWelcome to the homework 4 mtmflix tests, "
@@ -440,7 +440,7 @@ int main() {
     GameAddStrengthTest();
     GameRemoveAllPlayersWIthWeakWeaponTest();
     GameFightTest();
-    memoryTestUnit();
+  //  memoryTestUnit();
     print_grade();
     std::cout << "Hello, World!" << std::endl;
     std::cout << "Check!" << std::endl;

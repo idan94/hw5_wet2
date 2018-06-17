@@ -9,6 +9,8 @@
 C:/Users/idanc/CLionProjects/hw5_wet2/Game.cpp
 iostream
 -
+algorithm
+-
 mtm_exceptions.h
 C:/Users/idanc/CLionProjects/hw5_wet2/mtm_exceptions.h
 Game.h
@@ -16,6 +18,8 @@ C:/Users/idanc/CLionProjects/hw5_wet2/Game.h
 
 C:/Users/idanc/CLionProjects/hw5_wet2/Game.h
 ostream
+-
+vector
 -
 Player.h
 C:/Users/idanc/CLionProjects/hw5_wet2/Player.h

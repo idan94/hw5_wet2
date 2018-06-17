@@ -6,11 +6,14 @@
 #define HW4_MTM_GAME_H
 
 #include <ostream>
+#include <vector>
 #include "Player.h"
 #include "Weapon.h"
 #include "Warrior.h"
 #include "Wizard.h"
 #include "Troll.h"
+
+
 enum GameStatus {
     INVALID_PARAM,
     NAME_ALREADY_EXISTS,
@@ -23,7 +26,8 @@ enum GameStatus {
 
 class Game {
     int maxPlayers;
-    Player **players_array;
+    std::vector <Player* > players_array;
+    //Player **players_array;
     int num_of_players;
 public:
     //Constractor:
@@ -58,8 +62,9 @@ public:
     void
     addWizard(string const &playerName, string const &weaponName, Target target,
               int hitStrength, int range);
+
     void addTroll(string const &playerName, string const &weaponName,
-                        Target target, int hitStrength, int maxLife);
+                  Target target, int hitStrength, int maxLife);
 
     /**
      * get a player name, and upgrade him to the next level
