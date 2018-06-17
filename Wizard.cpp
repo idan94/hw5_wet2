@@ -3,13 +3,14 @@
 //
 
 #include "Wizard.h"
+#include "mtm_exceptions.h"
 
 
 //Constructor
-Warrior::Warrior(string const &name, Weapon const &weapon, bool rider):
+Wizard::Wizard(string const &name, Weapon const &weapon, int range):
         Player(name,weapon),
-        rider(rider) {
-    if (weapon.getTarget()==LEVEL) {
+        range(range) {
+    if (weapon.getTarget()==LIFE) {
         throw mtm::IllegalWeapon();
     }
 }
