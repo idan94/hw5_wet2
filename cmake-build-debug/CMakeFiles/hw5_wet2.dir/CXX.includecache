@@ -6,57 +6,57 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Game.cpp
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Game.cpp
 iostream
 -
 mtm_exceptions.h
-C:/Users/idanc/CLionProjects/hw5_wet2/mtm_exceptions.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/mtm_exceptions.h
 Game.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Game.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Game.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Game.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Game.h
 ostream
 -
 Player.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Player.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.h
 Weapon.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Weapon.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.h
 Warrior.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Warrior.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Player.cpp
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.cpp
 Player.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Player.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Player.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.h
 ostream
 -
 Weapon.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Weapon.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Warrior.cpp
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.cpp
 mtm_exceptions.h
-C:/Users/idanc/CLionProjects/hw5_wet2/mtm_exceptions.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/mtm_exceptions.h
 Warrior.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Warrior.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Warrior.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Warrior.h
 Player.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Player.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Player.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Weapon.cpp
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.cpp
 cstring
 -
 Weapon.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Weapon.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/Weapon.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Weapon.h
 ostream
 -
 cstring
 -
 
-C:/Users/idanc/CLionProjects/hw5_wet2/main.cpp
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/main.cpp
 iostream
 -
 cassert
@@ -66,15 +66,15 @@ cstring
 fstream
 -
 Game.h
-C:/Users/idanc/CLionProjects/hw5_wet2/Game.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/Game.h
 test_utilities.h
-C:/Users/idanc/CLionProjects/hw5_wet2/test_utilities.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/test_utilities.h
 
-C:/Users/idanc/CLionProjects/hw5_wet2/mtm_exceptions.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/mtm_exceptions.h
 exception
 -
 
-C:/Users/idanc/CLionProjects/hw5_wet2/test_utilities.h
+C:/Users/Etai Ohana/Documents/GitHub/hw5_wet2/test_utilities.h
 cstdio
 -
 cmath

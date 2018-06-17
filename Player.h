@@ -16,6 +16,13 @@ class Player {
     Weapon weapon;
 protected:
     int player_location;
+    // methods:
+    /**
+     *  calculate the distance between the player and another player(the enemy)
+     * @param enemy - the player we check our player's distance from
+     * @return - the distance (integer value).
+     */
+    static int findDistance(const Player& enemy);
 public:
 
     //Constructors
@@ -98,6 +105,7 @@ public:
 
     //Print Operator:
     friend std::ostream &operator<<(std::ostream &os, const Player &player);
+
 
 };
 
