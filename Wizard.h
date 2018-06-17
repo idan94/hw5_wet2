@@ -22,7 +22,7 @@ public:
     Wizard &operator=(const Wizard &wizard)= default;
 
 //Methods:
-    void makeStep() override;
+    bool checkIfCanAttack(Player &enemy) override ;
 
 
 

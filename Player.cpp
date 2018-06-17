@@ -11,7 +11,7 @@ static void changeNegativeToZero(int &num) {
 }
 
 //Constractor
-Player::Player(string const& name, const Weapon &weapon) :
+Player::Player(string const &name, const Weapon &weapon) :
         name(name),
         level(1),
         life(1),
@@ -55,7 +55,7 @@ void Player::nextLevel() {
     level++;
 }
 
-bool Player::isPlayer(string const& playerName) const {
+bool Player::isPlayer(string const &playerName) const {
     return playerName == name;
 }
 
@@ -71,10 +71,14 @@ void Player::addStrength(int strengthToAdd) {
     strength += strengthToAdd;
 }
 
-string const& Player::getName() {
+string const &Player::getName() {
     return name;
 }
 
+
+int Player::getLocation(){
+    return player_location;
+}
 bool Player::isAlive() const {
     return (level > 0 && life > 0 && strength > 0);
 }
@@ -84,51 +88,68 @@ bool Player::weaponIsWeak(int weaponMinStrength) const {
 }
 
 bool Player::fight(Player &player) {
-    if (player.player_location != player_location
+    /*if (player.player_location != player_location
         || player.weapon == weapon)
-        return false;
-    if (player.weapon > weapon) {
-        switch (player.weapon.getTarget()) {
-            case (LEVEL): {
-                level -= player.weapon.getHitStrength();
-                changeNegativeToZero(level);
-                break;
-            }
-            case (STRENGTH): {
-                strength -= player.weapon.getHitStrength();
-                changeNegativeToZero(strength);
-                break;
-            }
-            case (LIFE): {
-                life -= player.weapon.getHitStrength();
-                changeNegativeToZero(life);
-                break;
-            }
+        return false;*/
+    int who_attacks = 0;
+    //0- no one can attack. 1- this attack player.   2- player attack this
+    if (this->checkIfCanAttack(player) && !player.checkIfCanAttack(*this)) {
+        //if this can attack player, and player can't attack this
+        who_attacks=1;
+    }
+    if (player.checkIfCanAttack(*this) && !this->checkIfCanAttack(player)){
+        //if player can attack this, and this can't attack player
+        who_attacks=2;
+    }
+    if(this->checkIfCanAttack(player) && player.checkIfCanAttack(*this)){
+        //if both players can attack, we will check value
+        if(player.weapon > weapon){
+            who_attacks=2;
         }
-    } else {
-        switch (weapon.getTarget()) {
-            case (LEVEL): {
-                player.level -= weapon.getHitStrength();
-                changeNegativeToZero(level);
-                break;
-            }
-            case (STRENGTH): {
-                player.strength -= weapon.getHitStrength();
-                changeNegativeToZero(strength);
-                break;
-            }
-            case (LIFE): {
-                player.life -= weapon.getHitStrength();
-                changeNegativeToZero(life);
-                break;
-            }
+        if(weapon<player.weapon){
+            who_attacks=1;
         }
     }
+    if (who_attacks==0) return false;
+        if (who_attacks==2) {
+            switch (player.weapon.getTarget()) {
+                case (LEVEL): {
+                    level -= player.weapon.getHitStrength();
+                    break;
+                }
+                case (STRENGTH): {
+                    strength -= player.weapon.getHitStrength();
+                    break;
+                }
+                case (LIFE): {
+                    life -= player.weapon.getHitStrength();
+                    break;
+                }
+            }
+        } else {
+            switch (weapon.getTarget()) {
+                case (LEVEL): {
+                    player.level -= weapon.getHitStrength();
+                    break;
+                }
+                case (STRENGTH): {
+                    player.strength -= weapon.getHitStrength();
+                    break;
+                }
+                case (LIFE): {
+                    player.life -= weapon.getHitStrength();
+                    break;
+                }
+            }
+        }
+    changeNegativeToZero(level);
+    changeNegativeToZero(strength);
+    changeNegativeToZero(life);
     return true;
 }
 
-int Player::findDistance(const Player &enemy) {
-    if( this->player_location >)
+bool Player::checkIfCanAttack(Player &enemy) {
+    return (player_location == enemy.player_location);
 }
 
 //Comparesion operators:

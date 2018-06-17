@@ -14,3 +14,11 @@ Wizard::Wizard(string const &name, Weapon const &weapon, int range):
         throw mtm::IllegalWeapon();
     }
 }
+bool Wizard::checkIfCanAttack(Player &enemy){
+    if(player_location==enemy.getLocation()) return false;
+    int distance=(player_location-enemy.getLocation());
+    if(distance<0) {  //we want absolute distance
+        distance= -(distance);
+    }
+    return distance<=range;
+}

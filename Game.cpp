@@ -176,7 +176,6 @@ bool Game::removeAllPlayersWithWeakWeapon(int weaponStrength) {
 }
 
 GameStatus Game::fight(string const &playerName1, string const &playerName2) {
-
     Player *ptr_a = nullptr;
     Player *ptr_b = nullptr;
     for (int i = 0; i < num_of_players; ++i) {
@@ -192,7 +191,6 @@ GameStatus Game::fight(string const &playerName1, string const &playerName2) {
         }
     }
     if (ptr_a == nullptr || ptr_b == nullptr) return NAME_DOES_NOT_EXIST;
-
     if (!(ptr_a->fight(*ptr_b))) return FIGHT_FAILED;
     if (!ptr_a->isAlive()) {
         swapPlayer(*ptr_a, *players_array[num_of_players - 1]);

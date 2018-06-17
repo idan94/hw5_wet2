@@ -23,12 +23,12 @@ protected:
      * @param enemy - the player we check our player's distance from
      * @return - the distance (integer value).
      */
-    static int findDistance(const Player& enemy);
-public:
+    //static int findDistance(const Player& enemy);
+
 
     //Constructors
     Player(string const& name, const Weapon &weapon);
-
+public:
     //Destructor:
       virtual ~Player() = default;
 
@@ -79,7 +79,7 @@ public:
      * @return the name(string)
      */
     string const& getName();
-
+    int getLocation();
     /**
      * check if weapon is weaker then number given(check with getValue())
      * @param weaponMinStrength the number we compare with
@@ -108,7 +108,6 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Player &player);
 
     virtual bool checkIfCanAttack(Player &enemy);
-    virtual bool checkIfCanAttack(int enemy_location);
 
 };
 
