@@ -127,6 +127,10 @@ bool Player::fight(Player &player) {
     return true;
 }
 
+int Player::findDistance(const Player &enemy) {
+    if( this->player_location >)
+}
+
 //Comparesion operators:
 bool Player::operator>(Player player) {
     return this->name > player.name;
