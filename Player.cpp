@@ -116,7 +116,7 @@ bool Player::fight(Player &player) {
         if (player.weapon > weapon) {
             who_attacks = 2;
         }
-        if (weapon < player.weapon) {
+        if (weapon > player.weapon) {
             who_attacks = 1;
         }
     }

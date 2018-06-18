@@ -42,5 +42,6 @@ CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../Warrior.h
 CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../Weapon.h
 CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../Wizard.h
 CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../mtm_exceptions.h
 CMakeFiles/hw5_wet2.dir/main.cpp.obj: ../test_utilities.h
 
